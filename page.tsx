@@ -37,7 +37,7 @@ export default function Home() {
       causas: "Líquen plano pilar, alopecia frontal fibrosante e outras desordens inflamatórias crônicas do couro cabeludo.",
       diagnostico: "Tricotoscopia de alta resolução combinada com biópsia cutânea e análise histopatológica quando indicado.",
       tratamento: "Intervenção precoce e agressiva com anti-inflamatórios potentes para preservar os folículos remanescentes.",
-      quando: "Presença de coceira persistentente, dor, queimação, vermelhidão ou perda capilar acompanhada de alteração na textura da pele."
+      quando: "Presença de coceira persistente, dor, queimação, vermelhidão ou perda capilar acompanhada de alteração na textura da pele."
     },
     dermatites: {
       title: "Dermatites, Caspa e Descamações",
@@ -45,7 +45,7 @@ export default function Home() {
       causas: "Hiperatividade das glândulas sebáceas, proliferação fúngica local, psoríase e fatores emocionais associados.",
       diagnostico: "Exame clínico dermatológico e análise tricotoscópica da descamação e do eritema perifolicular.",
       tratamento: "Shampoos terapêuticos específicos, loções calmantes e fototerapia ou tratamentos sistêmicos se clinicamente necessário.",
-      quando: "Descamação persistentente, coceira intensa, crostas ou oleosidade excessiva refratária aos cuidados habituais."
+      quando: "Descamação permanente, coceira intensa, crostas ou oleosidade excessiva refratária aos cuidados habituais."
     }
   };
 
@@ -55,7 +55,7 @@ export default function Home() {
     { q: "O estresse emocional realmente pode fazer o cabelo cair?", a: "Sim. O estresse agudo eleva os níveis corporais de cortisol e pode antecipar a transição dos fios da fase de crescimento para a fase de queda, resultando em um eflúvio telógeno semanas ou meses após o evento gerador." },
     { q: "Lavar o cabelo diariamente piora ou acelera a queda?", a: "Mito. A lavagem higieniza o couro cabeludo, removendo o excesso de sebo e resíduos que podem favorecer inflamações. Os fios que se soltam durante o banho já estavam em fase de desprendimento natural." },
     { q: "Homens e mulheres podem desenvolver quadros de alopecia?", a: "Sim. A alopecia androgenética e outras condições inflamatórias afetam ambos os sexos, apresentando padrões de distribuição clínica e dinâmicas hormonais distintas, exigindo linhas de cuidado personalizadas." },
-    { q: "Quanto tempo costuma levar para observar os resultados iniciais?", a: "O ciclo de crescimento capilar é naturalmente lento. Em média, as primeiras respostas clínicas e estabilizações começam a ser visíveis microscopicamente entre 3 e 6 meses após o início do plano terapêutico individualizado." }
+    { q: "Quanto tempo custuma levar para observar os resultados iniciais?", a: "O ciclo de crescimento capilar é naturalmente lento. Em média, as primeiras respostas clínicas e estabilizações começam a ser visíveis microscopicamente entre 3 e 6 meses após o início do plano terapêutico individualizado." }
   ];
 
   return (
@@ -65,30 +65,27 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 bg-[#FBFBFA]/90 backdrop-blur-md z-50 border-b border-[#E4DBD5]/40 transition-all">
         <div className="max-w-6xl mx-auto px-6 h-24 flex items-center justify-between">
           
-          {/* LOGOMARCA OFICIAL INTEGRADA NO INÍCIO */}
+          {/* LOGOMARCA OFICIAL NO INÍCIO */}
           <div className="flex items-center">
             <a href="#home" className="block focus:outline-none">
               <img 
                 src="/logo.png" 
-                alt="Dra. Aline Godinho - Médica Tricologista" 
+                alt="Dra. Aline Godinho - Médica" 
                 className="h-10 md:h-12 w-auto object-contain transition-opacity duration-300 hover:opacity-90"
                 onError={(e) => {
-                  // Fallback elegante caso a imagem ainda não esteja na pasta public
                   e.currentTarget.style.display = 'none';
-                  if (e.currentTarget.parentElement) {
-                    const txtFallback = document.getElementById('brand-text-fallback');
-                    if (txtFallback) txtFallback.style.display = 'flex';
-                  }
+                  const txtFallback = document.getElementById('brand-text-fallback');
+                  if (txtFallback) txtFallback.style.display = 'flex';
                 }}
               />
               <div id="brand-text-fallback" className="hidden flex-col">
                 <span className="font-serif text-xl tracking-[0.15em] text-[#0D1828] uppercase font-light">Aline Godinho</span>
-                <span className="text-[9px] tracking-[0.2em] text-[#A47F67] uppercase font-medium mt-0.5">Médica Tricologista</span>
+                <span className="text-[9px] tracking-[0.2em] text-[#A47F67] uppercase font-medium mt-0.5">Médica</span>
               </div>
             </a>
           </div>
           
-          {/* MENU QUIET LUXURY */}
+          {/* MENU */}
           <nav className="hidden lg:flex items-center space-x-8 text-xs tracking-[0.15em] uppercase font-medium">
             <a href="#sobre" className="text-[#23374B] hover:text-[#A47F67] transition-colors duration-300">Sobre</a>
             <a href="#atuacao" className="text-[#23374B] hover:text-[#A47F67] transition-colors duration-300">Áreas de Atuação</a>
@@ -109,11 +106,10 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO SECTION - APRESENTAÇÃO HARMONIZADA */}
+      {/* HERO SECTION */}
       <section id="home" className="pt-40 pb-20 md:pt-48 md:pb-28 bg-gradient-to-b from-[#FBFBFA] via-[#E4DBD5]/20 to-[#FBFBFA] border-b border-[#E4DBD5]/30 px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           
-          {/* TEXTO INSTITUCIONAL */}
           <div className="md:col-span-7 space-y-6 text-left">
             <div className="space-y-2">
               <span className="text-xs uppercase tracking-[0.2em] text-[#A47F67] font-semibold block">Atendimento Dedicado</span>
@@ -143,7 +139,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* FOTO DA MÉDICA INTEGRADA COM MOLDURA QUIET LUXURY */}
           <div className="md:col-span-5 flex justify-center md:justify-end">
             <div className="relative p-3 bg-white border border-[#E4DBD5] rounded-[2px] shadow-sm max-w-sm md:max-w-full">
               <div className="absolute top-0 right-0 w-8 h-8 -mr-2 -mt-2 opacity-20">
@@ -151,10 +146,9 @@ export default function Home() {
               </div>
               <img 
                 src="/dra-aline.jpg" 
-                alt="Dra. Aline Godinho no consultório" 
+                alt="Dra. Aline Godinho" 
                 className="rounded-[1px] w-full h-auto object-cover max-h-[460px]"
                 onError={(e) => {
-                  // Caso a imagem profissional ainda não esteja na pasta, exibe um espaço cinza elegante
                   e.currentTarget.src = "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=600";
                 }}
               />
@@ -164,7 +158,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SOBRE - MESCLADO E EDUCATIVO */}
+      {/* SOBRE */}
       <section id="sobre" className="py-24 bg-white px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-4 space-y-3">
@@ -177,32 +171,20 @@ export default function Home() {
               A atuação profissional da Dra. Aline Godinho é estritamente pautada pelo rigor da evidência científica e pela busca contínua por atualizações no cenário da dermatologia voltada à saúde capilar. Com foco na condução ética e transparente da medicina, cada atendimento é estruturado para oferecer clareza diagnóstica absoluta.
             </p>
             <p>
-              Sua prática diária alia o acolhimento ao paciente ao uso de métodos propedêuticos avançados. A participação ativa e constantee em congressos nacionais, simpósios científicos e fóruns de discussão internacional garante a integração de inovações terapêuticas devidamente validadas pelas autoridades competentes.
+              Sua prática diária alia o acolhimento ao paciente ao uso de métodos propedêuticos avançados. A participação ativa e constante em congressos nacionais, simpósios científicos e fóruns de discussão internacional garante a integração de inovações terapêuticas devidamente validadas pelas autoridades competentes.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 text-xs tracking-wider uppercase font-medium text-[#0D1828]">
-              <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 bg-[#A47F67] rounded-full"></span>
-                Atualização Científica Constantee
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="w-1.5 h-1.5 bg-[#A47F67] rounded-full"></span>
-                Conduta Pró-Evidência Clínica
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ÁREAS DE ATUACÃO - INTERATIVIDADE SUAVE */}
+      {/* ÁREAS DE ATUAÇÃO */}
       <section id="atuacao" className="py-24 bg-gradient-to-b from-white via-[#E4DBD5]/10 to-[#FBFBFA] border-t border-b border-[#E4DBD5]/30 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-3 mb-16">
             <span className="text-[10px] uppercase tracking-[0.2em] text-[#A47F67] font-bold block">Investigação Avançada</span>
             <h2 className="font-serif text-3xl md:text-4xl text-[#0D1828] font-light">Patologias e Abordagens Clínicas</h2>
-            <p className="text-xs text-[#23374B]/70 max-w-md mx-auto font-light">Selecione uma categoria para compreender a fundamentação diagnóstica de forma educativa.</p>
           </div>
 
-          {/* ABAS COM DESIGN DE LINHAS FINAS */}
           <div className="flex flex-wrap justify-center gap-2 mb-12 max-w-4xl mx-auto">
             {Object.keys(areasAtuacion).map((key) => (
               <button
@@ -219,8 +201,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* DETALHE DO CARD EDUCATIVO */}
-          <div className="bg-white border border-[#E4DBD5]/60 p-8 md:p-12 rounded-[2px] shadow-sm max-w-4xl mx-auto transition-all duration-300">
+          <div className="bg-white border border-[#E4DBD5]/60 p-8 md:p-12 rounded-[2px] shadow-sm max-w-4xl mx-auto">
             <h3 className="font-serif text-2xl text-[#0D1828] mb-6 font-light">{areasAtuacion[activeTab as keyof typeof areasAtuacion].title}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs md:text-sm">
               <div className="space-y-4">
@@ -251,15 +232,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* A CONSULTA - TRANSIÇÃO SUAVE PARA FRENTE ESCURA INTEGRADA */}
+      {/* A CONSULTA */}
       <section id="consulta" className="py-24 bg-gradient-to-br from-[#0D1828] to-[#23374B] text-white px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           <div className="md:col-span-5 space-y-4">
             <span className="text-[10px] uppercase tracking-[0.2em] text-[#A47F67] font-bold block">Acolhimento & Detalhe</span>
             <h2 className="font-serif text-3xl md:text-4xl font-light leading-tight text-[#FBFBFA]">A Linha de Cuidado na Consulta</h2>
-            <p className="text-xs md:text-sm font-light text-[#E4DBD5]/70 leading-relaxed">
-              O agendamento assegura um tempo expandido e exclusivo, focado na completa individualização do mapeamento clínico capilar.
-            </p>
           </div>
           <div className="md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
@@ -268,7 +246,7 @@ export default function Home() {
               { t: "Tricotoscopia Digital", d: "Análise microscópica de alta resolução para mapear sinais inflamatórios perifoliculares, variação de diâmetro e viabilidade folicular." },
               { t: "Plano Terapêutico Customizado", d: "Desenvolvimento de uma estratégia customizada unindo suporte tópico, sistêmico e orientações personalizadas de acompanhamento." }
             ].map((item, index) => (
-              <div key={index} className="border border-[#E4DBD5]/10 p-6 rounded-[2px] bg-white/[0.02] hover:bg-white/[0.04] transition-colors duration-300">
+              <div key={index} className="border border-[#E4DBD5]/10 p-6 rounded-[2px] bg-white/[0.02]">
                 <h3 className="font-serif text-lg mb-2 text-[#E4DBD5] font-light">{item.t}</h3>
                 <p className="text-xs font-light text-white/70 leading-relaxed">{item.d}</p>
               </div>
@@ -277,12 +255,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCEDIMENTOS - ÉTICO E CIENTÍFICO */}
+      {/* PROCEDIMENTOS */}
       <section id="procedimentos" className="py-24 bg-[#FBFBFA] px-6 max-w-6xl mx-auto">
         <div className="text-center space-y-3 mb-16">
           <span className="text-[10px] uppercase tracking-[0.2em] text-[#A47F67] font-bold block">Critério Técnico Regulamentado</span>
           <h2 className="font-serif text-3xl text-[#0D1828] font-light">Procedimentos Clínicos Complementares</h2>
-          <p className="text-xs text-[#23374B]/70 max-w-lg mx-auto font-light">Todas as intervenções são descritas de forma científica e pautadas exclusivamente pelas resoluções normativas vigentes do CFM.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs md:text-sm max-w-5xl mx-auto">
@@ -291,7 +268,7 @@ export default function Home() {
             { t: "Infiltrações Intralesionais", d: "Aplicação focal e controlada de ativos moduladores ou anti-inflamatórios diretamente na derme profunda, quando houver indicação médica." },
             { t: "Laserterapia / Fotobiomodulação", d: "Uso de comprimentos de onda de luz específicos voltados para atuar positivamente no metabolismo celular da microcirculação, quando houver indicação médica." }
           ].map((item, index) => (
-            <div key={index} className="border border-[#E4DBD5] p-6 rounded-[2px] bg-white flex flex-col justify-between shadow-sm hover:border-[#A47F67]/60 transition-colors duration-500">
+            <div key={index} className="border border-[#E4DBD5] p-6 rounded-[2px] bg-white flex flex-col justify-between shadow-sm">
               <div className="space-y-3">
                 <h3 className="font-serif text-lg text-[#0D1828] font-light">{item.t}</h3>
                 <p className="font-light text-[#23374B]/80 leading-relaxed text-xs">{item.d}</p>
@@ -304,7 +281,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PERGUNTAS FREQUENTES (FAQ) */}
+      {/* FAQ */}
       <section id="faq" className="py-24 bg-gradient-to-b from-[#FBFBFA] via-[#E4DBD5]/10 to-[#FBFBFA] border-t border-b border-[#E4DBD5]/30 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center space-y-2 mb-12">
@@ -319,86 +296,3 @@ export default function Home() {
                   onClick={() => setFaqOpen(faqOpen === index ? null : index)}
                   className="w-full flex justify-between items-center text-left py-2 font-serif text-base text-[#0D1828] hover:text-[#A47F67] transition-colors focus:outline-none"
                 >
-                  <span className="font-light">{faq.q}</span>
-                  <span className="text-xs text-[#A47F67] ml-4 font-mono">{faqOpen === index ? '—' : '+'}</span>
-                </button>
-                {faqOpen === index && (
-                  <p className="text-xs md:text-sm font-light text-[#23374B]/80 leading-relaxed pt-2 pl-1 transition-opacity duration-300">
-                    {faq.a}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CONTATO & LOCALIZAÇÃO */}
-      <section id="contato" className="py-24 px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
-          <div className="md:col-span-5 space-y-6">
-            <div className="space-y-2">
-              <span className="text-[10px] uppercase tracking-[0.2em] text-[#A47F67] font-bold block">Canais de Atendimento</span>
-              <h2 className="font-serif text-3xl text-[#0D1828] font-light">Informações de Contato</h2>
-            </div>
-            
-            <div className="space-y-4 text-xs md:text-sm font-light text-[#23374B]/90">
-              <div className="flex items-start gap-3">
-                <span className="text-[#A47F67] font-semibold uppercase tracking-wider text-[11px] pt-0.5">Endereço:</span>
-                <p className="leading-relaxed text-[#0D1828]">Avenida do Contorno, 7069 - Sala 410<br />Bairro Lourdes - Belo Horizonte - MG</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-[#A47F67] font-semibold uppercase tracking-wider text-[11px]">WhatsApp:</span>
-                <a href="https://wa.me/5531999442277" target="_blank" rel="noopener noreferrer" className="hover:underline text-[#0D1828]">(31) 99944-2277</a>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-[#A47F67] font-semibold uppercase tracking-wider text-[11px]">Digital:</span>
-                <a href="https://instagram.com/dra.alinegodinho" target="_blank" rel="noopener noreferrer" className="hover:underline text-[#0D1828]">@dra.alinegodinho</a>
-              </div>
-            </div>
-          </div>
-          
-          <div className="md:col-span-7 bg-white border border-[#E4DBD5] p-8 rounded-[2px] shadow-sm">
-            <form className="space-y-4 text-xs" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-1">
-                  <label className="uppercase tracking-wider text-[#23374B]/80 font-medium">Nome Completo</label>
-                  <input type="text" className="w-full bg-[#FBFBFA] border border-[#E4DBD5] p-3 rounded-[2px] focus:outline-none focus:border-[#A47F67]" />
-                </div>
-                <div className="space-y-1">
-                  <label className="uppercase tracking-wider text-[#23374B]/80 font-medium">WhatsApp corporativo</label>
-                  <input type="tel" className="w-full bg-[#FBFBFA] border border-[#E4DBD5] p-3 rounded-[2px] focus:outline-none focus:border-[#A47F67]" />
-                </div>
-              </div>
-              <div className="space-y-1">
-                <label className="uppercase tracking-wider text-[#23374B]/80 font-medium">Sua Mensagem ou Dúvida</label>
-                <textarea rows={4} className="w-full bg-[#FBFBFA] border border-[#E4DBD5] p-3 rounded-[2px] focus:outline-none focus:border-[#A47F67]"></textarea>
-              </div>
-              <button type="submit" className="w-full bg-[#0D1828] text-white hover:bg-[#A47F67] transition-colors duration-500 py-3.5 uppercase tracking-widest font-medium rounded-[2px]">
-                Enviar Mensagem Informativa
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      {/* RODAPÉ MESTRE */}
-      <footer className="bg-[#0D1828] text-white/50 text-[11px] font-light py-12 px-6 border-t border-white/5">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-center md:text-left space-y-1">
-            <p className="text-white tracking-wider font-serif text-sm">Dra. Aline Godinho</p>
-            <p>Médica Responsável | CRM-MG 69493</p>
-            <p className="text-[10px] text-white/30 pt-1">Este material possui caráter estritamente educativo e formativo em saúde. Proibida a reprodução sem autorização.</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6 tracking-wider uppercase text-[10px]">
-            <span className="hover:text-white cursor-pointer transition-colors">Política de Privacidade</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Termos de Uso</span>
-            <span className="hover:text-white cursor-pointer transition-colors">LGPD</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Cookies</span>
-          </div>
-        </div>
-      </footer>
-
-    </div>
-  );
-}
